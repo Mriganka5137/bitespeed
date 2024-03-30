@@ -72,6 +72,7 @@ const Sidebar = ({
           </div>
         </form>
       ) : (
+        // Drag and drop message node
         <div
           className="  border text-center p-5 rounded-md border-blue-500 text-blue-800 w-56 flex flex-col items-center gap-2 cursor-move"
           onDragStart={(event) => onDragStart(event, "messageNode")}
