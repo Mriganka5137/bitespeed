@@ -4,6 +4,7 @@ import { getDisconnectedNodes } from "@/zustand/utils";
 import Link from "next/link";
 import React from "react";
 import { useToast } from "./ui/use-toast";
+import { IoLogoGithub } from "react-icons/io5";
 
 const Navbar = () => {
   const { edges, nodes } = useStore((state) => state);
@@ -34,6 +35,9 @@ const Navbar = () => {
       >
         Save Changes
       </button>
+      <Link href="https://github.com/Mriganka5137/bitespeed" target="_blank">
+        <IoLogoGithub className=" size-8 hover:text-gray-600 hover:-translate-y-1 transition-transform duration-300 ease-in-out" />
+      </Link>
     </nav>
   );
 };
