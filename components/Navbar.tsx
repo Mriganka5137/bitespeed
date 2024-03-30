@@ -7,7 +7,6 @@ import { useToast } from "./ui/use-toast";
 
 const Navbar = () => {
   const { edges, nodes } = useStore((state) => state);
-  const [error, setError] = React.useState<string | null>(null);
   const { toast } = useToast();
   const handleSaveClick = () => {
     // Check for disconnected nodes
@@ -19,11 +18,12 @@ const Navbar = () => {
         description: "Cannot save changes. There are disconnected nodes.",
         variant: "destructive",
       });
+    } else {
+      toast({
+        description: "Changes saved successfully.",
+        variant: "default",
+      });
     }
-    toast({
-      description: "Changes saved successfully.",
-      variant: "default",
-    });
   };
 
   return (
