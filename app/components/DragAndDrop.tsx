@@ -24,7 +24,7 @@ const selector = (state: any) => ({
   setEdges: state.setEdges,
 });
 
-const DnDFlow = () => {
+const DragAndDrop = () => {
   const {
     nodes,
     edges,
@@ -101,8 +101,8 @@ const DnDFlow = () => {
             onInit={setReactFlowInstance}
             onDrop={onDrop}
             onDragOver={onDragOver}
-            fitView
             nodeTypes={nodeTypes}
+            panOnDrag={true}
             onNodeClick={(
               event: React.MouseEvent,
               node: Node & { data: { label: string } }
@@ -127,4 +127,4 @@ const DnDFlow = () => {
   );
 };
 
-export default DnDFlow;
+export default DragAndDrop;

@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import DnDFlow from "./components/DragAndDrop";
-import Navbar from "@/components/Navbar";
+import DragAndDrop from "./components/DragAndDrop";
 
 const page = () => {
   return (
     <div className=" w-full h-screen">
-      <DnDFlow />
+      <DragAndDrop />
     </div>
   );
 };
